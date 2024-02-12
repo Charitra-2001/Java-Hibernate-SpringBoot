@@ -1,0 +1,5 @@
+3package com.charitra.SpringMVC;
+
+public class AlienController {
+
+}

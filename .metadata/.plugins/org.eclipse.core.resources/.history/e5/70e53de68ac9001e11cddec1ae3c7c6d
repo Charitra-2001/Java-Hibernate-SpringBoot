@@ -1,0 +1,48 @@
+package com.charitra.SpringMVC;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProductDB {
+	Connection con;
+
+	public ProductDB() {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Charitra2536");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	public void save(Product p) throws SQLException {
+		PreparedStatement ps = con.prepareStatement("INSERT INTO PRODUCTS (name,type,place,warrenty) VALUES(?,?,?,?)");
+		ps.setString(1, p.getName());
+		ps.setString(2, p.getType());
+		ps.setString(3, p.getPlace());
+		ps.setInt(4, p.getWarrenty());
+		ps.execute();
+	}
+
+	public List<Product> getAllProducts() throws Exception {
+		String query = "Select * from products";
+		Statement st = con.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		List<Product> ans = new ArrayList<Product>();
+		
+		while(rs.next())
+		{
+			ans.add(new Product(rs.getString(2),rs.getString(3),rs.getString(4),rs.getInt(5)));
+		}
+		return ans;
+	}
+
+}

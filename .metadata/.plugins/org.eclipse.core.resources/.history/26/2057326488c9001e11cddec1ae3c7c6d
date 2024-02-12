@@ -1,0 +1,10 @@
+package com.charitra.SpringMVC;
+
+import java.sql.Connection;
+
+public class ProductDB {
+	Connection con;
+	public ProductDB() {
+		// TODO Auto-generated constructor stub
+	}
+}

@@ -1,0 +1,21 @@
+1707204253985	Delete element
+1707205799910	Move 'index.jsp' to 'webapp'
+1707211548858	Move 'index.jsp' to 'WEB-INF'
+1707211574738	Move 'index.jsp' to 'pages'
+1707212667411	Move 'webapp' to 'charitra'
+1707212688550	Rename package 'com.charitra.webapp'
+1707212775813	Copy package
+1707212928030	Delete element
+1707212987629	Move 'webapp' to 'main'
+1707213355686	Move 'META-INF' to 'resources'
+1707222815802	Move 'index.jsp' to 'webapp'
+1707222822213	Delete element
+1707409728050	Move 'result.jsp' to 'webapp'
+1707411869040	Delete element
+1707411895433	Delete element
+1707457962404	Move 'showAliens.jsp' to 'views'
+1707457979660	Move 'showAliens.jsp' to 'webapp'
+1707458004013	Move 3 resources to 'views'
+1707458931831	Copy packages
+1707460236729	Copy folder
+1707567868164	Copy compilation unit

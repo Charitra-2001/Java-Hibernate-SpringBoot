@@ -1,0 +1,12 @@
+package com.charitra;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class AlienResource {
+
+	public Aliens getAliens()
+	{
+		
+	}
+}

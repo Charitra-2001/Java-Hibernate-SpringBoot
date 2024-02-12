@@ -1,0 +1,1 @@
+Insert into alien VALUES(101,"Mayank","Hava")

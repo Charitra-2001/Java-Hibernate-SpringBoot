@@ -1,0 +1,44 @@
+package com.charitra.SpringMVC;
+
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) throws Exception {
+		ProductService ps;
+
+//		ps.addProduct(new Product("Asus Vivobook", "Laptop", "Brown Table", 2020));
+//		ps.addProduct(new Product("Mac Book", "Laptop", "White Table", 2021));
+//		ps.addProduct(new Product("ChromeBook", "Laptop", "Neon Table", 2022));
+//		ps.addProduct(new Product("Type C", "Cable", "Brown Table", 2023));
+//		ps.addProduct(new Product("Type A", "Cable", "Neon Table", 2024));
+//		ps.addProduct(new Product("USB", "Cable", "Brwon Table", 2020));
+//		ps.addProduct(new Product("HDMI", "Cable", "White Table", 2021));
+//		ps.addProduct(new Product("MacMouse", "Mouse", "Neon Table", 2022));
+		
+//		List<Product> products = ps.getAllProducts();
+//		
+//		for (Product product : products) {
+//			System.out.println(product);
+//		}
+//		
+//		Product product = ps.getProduct("Asus Vivobook");
+//		System.out.println(product);
+		
+//		List<Product> products2 = ps.getAllProductsFromPlace("Neon Table");
+//		for (Product product1 : products2) {
+//			System.out.println(product1);
+//		}
+//		System.out.println("------------");
+//		List<Product> products3 = ps.getAllProductsByExpiredWarrenty(2024);
+//		for (Product product1 : products3) {
+//			System.out.println(product1);
+//		}
+//		System.out.println("-------------");
+		
+		List<Product> products4 = ps.getPorductsByParticularText("op");
+		for (Product product1 : products4) {
+			System.out.println(product1);
+		}
+
+	}
+}

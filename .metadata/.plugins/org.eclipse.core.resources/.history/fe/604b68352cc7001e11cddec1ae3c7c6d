@@ -1,0 +1,12 @@
+ package com.charitra.Dao;
+
+import java.util.List;
+
+import com.charitra.model.Alien;
+
+public class AlienDao {
+	public List<Alien> getAliens()
+	{
+		return new Arra
+	}
+}

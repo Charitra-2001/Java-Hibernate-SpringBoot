@@ -1,0 +1,9 @@
+package com.charitra;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface AlienRepository extends CrudRepository<Aliens,Integer> {
+	
+	// Here we are 
+
+}

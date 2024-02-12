@@ -1,0 +1,9 @@
+package com.charitra;
+
+public class Alien {
+
+	public void code()
+	{
+		System.out.println("Hello I am coding");
+	}
+}

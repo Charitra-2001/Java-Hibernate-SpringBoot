@@ -1,0 +1,26 @@
+package com.charitra.SpringMVC;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class ProductDB {
+	Connection con;
+	public ProductDB() throws Exception {
+		Class.forName("com.mysql.jdbc.Driver");
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test,root,Charitra2536");
+	}
+	
+	public void save(Product p) throws SQLException
+	{
+		PreparedStatement ps = con.prepareStatement("INSERT INTO PRODUCT VALUES(?,?,?,?)");
+		ps.setString(1, p.getName());
+		ps.setString(2,p.getPlace());
+		ps.setString(3,p.getType());
+		ps.setInt(4,p.getWarrenty());
+		ps.execute();
+	}
+	
+	
+}

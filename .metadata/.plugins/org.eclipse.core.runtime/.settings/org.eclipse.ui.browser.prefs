@@ -1,0 +1,4 @@
+browser-choice=0
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="0">\n<system/>\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=http\://localhost\:8080/springmvc/|*|http\://localhost\:8080/springmvc/getAliens|*|http\://localhost\:8080/springmvc/getAlien|*|http\://localhost\:8080/springmvc/addAlien?aid\=1&aname\=sas|*|http\://localhost\:8080/springmvc/addAlien?aid\=1&aname\=asdasd|*|http\://localhost\:8080/springmvc/addAlien|*|http\://localhost\:8080/DemoReact1/|*|http\://localhost\:8080/DemoReact1/webapi/aliens|*|http\://localhost\:8080/DemoReact1/webapi/myresource|*|http\://localhost\:8080/DemoReact1/webapi/myresources|*|http\://localhost\:8080/DemoReact/webapi/myresource|*|http\://localhost\:8080/DemoReact/|*|http\://localhost\:8080/DemoReact/WEB-INF/classes/com/charitra/DemoReact/MyResource.java|*|http\://localhost\:8080/DemoReact|*|http\://localhost\:8080/DemoReact/myresource|*|

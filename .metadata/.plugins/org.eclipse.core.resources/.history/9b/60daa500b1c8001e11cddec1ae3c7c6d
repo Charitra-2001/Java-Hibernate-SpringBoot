@@ -1,0 +1,23 @@
+package com.charitra.SpringMVC;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.charitra.model.Alien;
+
+@Controller
+public class AlienController {
+	@Autowired
+	AlienRepo repo;
+	@GetMapping("aliens")
+	@ReponseBody
+	public String getAliens() {
+		
+		List<Alien> aliens = repo.findAll();
+		
+		return aliens.toString();
+	}
+}

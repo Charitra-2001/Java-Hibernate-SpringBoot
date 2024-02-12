@@ -1,0 +1,6 @@
+package com.charitra;
+
+@RestController
+public class AlienResource {
+
+}

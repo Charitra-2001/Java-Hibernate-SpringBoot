@@ -1,0 +1,25 @@
+package com.charitra.DemoReact.DemoReact1;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+// Here we have to tell that the object will be converted in XML format
+
+
+public class Aliens {
+	
+	private int id;
+	private String name;
+	private int points;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getPoints() {
+		return points;
+	}
+	public void setPoints(int points) {
+		this.points = points;
+	}
+}

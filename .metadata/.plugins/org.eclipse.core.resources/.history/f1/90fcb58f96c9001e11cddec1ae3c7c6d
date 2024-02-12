@@ -1,0 +1,48 @@
+package com.charitra.SpringMVC;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ProductService {
+	List<Product> store = new ArrayList<Product>();
+	@Autowired
+	ProductDB pd;
+	public void addProduct(Product p) 
+	{
+		pd.save(p);
+	}
+	public List<Product> getAllProducts() throws Exception {
+		return pd.getAllProducts();
+	}
+//	public Product getProduct(String name) throws Exception{
+//		return pd.getProductByName(name);
+//	}
+//	public List<Product> getAllProductsFromPlace(String place) throws Exception {
+//		return pd.getAllProductsFromPlace(place);
+//	}
+//	public List<Product> getAllProductsByExpiredWarrenty(int year) throws Exception{
+//		
+//		return pd.getAllProductsByExpiredWarrenty(year);
+//	}
+//	public List<Product> getPorductsByParticularText(String name) throws Exception{
+//		// TODO Auto-generated method stub
+//		List<Product> resultList = pd.getAllProducts();
+//		List<Product> ans = new ArrayList<Product>();
+//		for(Product p:resultList)
+//		{
+//			String name1 = p.getName().toLowerCase();
+//			String place = p.getPlace().toLowerCase();
+//			String type = p.getType().toLowerCase();
+//			if(name1.contains(name)||place.contains(name)||type.contains(name))
+//			{
+//				ans.add(p);
+//			}
+//		}
+//		return ans;
+//	}
+}

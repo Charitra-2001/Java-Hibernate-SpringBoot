@@ -1,0 +1,28 @@
+package com.charitra;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class AlienResouces {
+	
+	@Autowired // With this we dont have to use new to create
+	AlienRepository repo;
+	@GetMapping("/aliens")
+	public List<Aliens> getAliens()
+	{
+		// Jackson dependency is used to convert List into JSON object
+		Aliens a = new Aliens();
+		a.setId(100);
+		a.setName("Charitra");
+		a.setPoints(100);
+		
+		List<Aliens> ans = new ArrayList<>();
+		ans.add(a);
+		return ans;
+	}
+}

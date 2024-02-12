@@ -1,0 +1,9 @@
+package com.charitra.SpringMVC;
+
+public class Main {
+	public static void main(String[] args) {
+		ProductService ps = new ProductService();
+
+		ps.addProduct(new Product("Asus Vivobook", "Laptop", "Brown Table", 2020););
+	}
+}

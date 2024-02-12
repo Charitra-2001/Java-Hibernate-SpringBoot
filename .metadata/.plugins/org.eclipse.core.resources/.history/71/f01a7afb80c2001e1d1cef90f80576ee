@@ -1,0 +1,17 @@
+package com.charitra;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class AlienResource {
+
+	public List<Aliens> getAliens()
+	{
+		Aliens a = new Aliens();
+		a.setId(100);
+		a.setName("Charitra");
+		a.setPoints(100);
+		
+		return a;
+	}
+}

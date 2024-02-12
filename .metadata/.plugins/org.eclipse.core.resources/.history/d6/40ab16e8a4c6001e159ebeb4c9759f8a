@@ -1,0 +1,57 @@
+package com.charitra.SpringMVC;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import jakarta.servlet.http.HttpSession;
+
+
+@Controller
+public class HomeController {
+	
+	@GetMapping("/")
+	public String home()
+	{
+		return "index";
+	}
+	
+//	@GetMapping("add")  // This is written with help of servlet now we do same with JSP
+//	public String add(HttpServletRequest req) {
+//		int i = Integer.parseInt(req.getParameter("num1"));
+//		int j = Integer.parseInt(req.getParameter("num2"));
+//		int ans = i+j;
+//		// Now to return data to servlet we can use session
+//		HttpSession session  = req.getSession();
+//		session.setAttribute("ans",ans);
+//		return "result.jsp";
+//	}
+	
+	
+//	@GetMapping("add")
+//	public String add(@RequestParam("num1") int i,@RequestParam("num2") int j,HttpSession session)
+//	{
+//		int ans = i+j;
+//		session.setAttribute("ans", ans);
+//		return "result.jsp";
+//	}
+	
+	// Now we are going to use ModelAndView instead of HttpSession
+	@GetMapping("add")
+	public ModelAndView add(@RequestParam("num1") int i,@RequestParam("num2") int j)
+	{
+		ModelAndView mv = new ModelAndView();
+		int ans = i+j;
+		mv.setViewName("result");
+		mv.addObject("ans",ans);
+		return mv;
+	}
+	/* If we only want to set attribute and return string as path then we can use Model object in add parameter like Model m */
+	
+	@GetMapping("addAlien")
+	public String addAlien(@RequestParam("aid") String a,@RequestParam("aname") String b) {
+		
+		return "result";
+	}
+}

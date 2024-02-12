@@ -1,0 +1,7 @@
+package com.charitra.SpringMVC;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductDB_JPA extends JpaRepository<Product,Integer> {
+
+}

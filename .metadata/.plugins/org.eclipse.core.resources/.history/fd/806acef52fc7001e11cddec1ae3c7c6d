@@ -1,0 +1,17 @@
+ package com.charitra.Dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+
+import com.charitra.model.Alien;
+
+public class AlienDao {
+	private SessionFactory sessionFactory;
+	public List<Alien> getAliens()
+	{
+		Session session = 
+		return new ArrayList<Alien>();
+	}
+}

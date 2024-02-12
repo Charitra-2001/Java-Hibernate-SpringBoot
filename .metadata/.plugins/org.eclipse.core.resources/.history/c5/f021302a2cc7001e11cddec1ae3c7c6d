@@ -1,0 +1,10 @@
+ package com.charitra.Dao;
+
+import java.util.List;
+
+public class AlienDao {
+	public List<Alien> getAliens()
+	{
+		
+	}
+}

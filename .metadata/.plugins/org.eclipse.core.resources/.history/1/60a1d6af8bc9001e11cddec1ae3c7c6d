@@ -1,0 +1,57 @@
+package com.charitra.SpringMVC;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProductService {
+	List<Product> store = new ArrayList<Product>();
+	ProductDB pd = new ProductDB();
+	public void addProduct(Product p) throws SQLException
+	{
+		pd.save(p);
+	}
+	public List<Product> getAllProducts() throws Exception {
+		return pd.getAllProducts();
+	}
+	public Product getProduct(String name) throws Exception{
+		return pd.getProductByName(name);
+	}
+	public List<Product> getAllProductsFromPlace(String place) {
+		List<Product> products = new ArrayList<Product>();
+		for(Product p:store)
+		{
+			if(p.getPlace().equals(place))
+			{
+				products.add(p);
+			}
+		}
+		return products;
+	}
+	public List<Product> getAllProductsByExpiredWarrenty(int year) {
+		List<Product> products = new ArrayList<Product>();
+		for(Product p:store)
+		{
+			if(p.getWarrenty()<year)
+			{
+				products.add(p);
+			}
+		}
+		return products;
+	}
+	public List<Product> getPorductsByParticularText(String name) {
+		// TODO Auto-generated method stub
+		List<Product> ans = new ArrayList<Product>();
+		for(Product p:store)
+		{
+			String name1 = p.getName().toLowerCase();
+			String place = p.getPlace().toLowerCase();
+			String type = p.getType().toLowerCase();
+			if(name1.contains(name)||place.contains(name)||type.contains(name))
+			{
+				ans.add(p);
+			}
+		}
+		return ans;
+	}
+}

@@ -1,0 +1,36 @@
+package com.charitra.SpringMVC;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
+
+@Controller
+public class HomeController {
+	
+	@GetMapping("/")
+	public String home()
+	{
+		return "index.jsp";
+	}
+	
+//	@GetMapping("add")  // This is written with help of servlet now we do same with JSP
+//	public String add(HttpServletRequest req) {
+//		int i = Integer.parseInt(req.getParameter("num1"));
+//		int j = Integer.parseInt(req.getParameter("num2"));
+//		int ans = i+j;
+//		// Now to return data to servlet we can use session
+//		HttpSession session  = req.getSession();
+//		session.setAttribute("ans",ans);
+//		return "result.jsp";
+//	}
+	
+	
+	@GetMapping("add")
+	public String add()
+	{
+		
+	}
+}

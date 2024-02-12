@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+/Users/Charitra/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2712865977.index
+172239036.index
+2710363012.index
+3153971817.index
+25981260.index

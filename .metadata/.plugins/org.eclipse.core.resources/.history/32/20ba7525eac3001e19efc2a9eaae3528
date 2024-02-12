@@ -1,0 +1,24 @@
+package com.charitra;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class AlienResouces {
+	
+	@GetMapping(path="/aliens")
+	public List<Aliens> getAliens()
+	{
+		Aliens a = new Aliens();
+		a.setId(100);
+		a.setName("Charitra");
+		a.setPoints(100);
+		
+		List<Aliens> ans = new ArrayList<>();
+		ans.add(a);
+		return ans;
+	}
+}

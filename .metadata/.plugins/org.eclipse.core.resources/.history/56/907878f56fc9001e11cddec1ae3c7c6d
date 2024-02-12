@@ -1,0 +1,59 @@
+package com.charitra.SpringMVC;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProductService {
+	List<Product> store = new ArrayList<Product>();
+	public void addProduct(Product p)
+	{
+		store.add(p);
+	}
+	public List<Product> getAllProducts() {
+		return store;
+	}
+	public Product getProduct(String name) {
+		for(Product p:store)
+		{
+			if(p.getName().equals(name))return p;
+		}
+		return null;
+	}
+	public List<Product> getAllProductsFromPlace(String place) {
+		List<Product> products = new ArrayList<Product>();
+		for(Product p:store)
+		{
+			if(p.getPlace().equals(place))
+			{
+				products.add(p);
+			}
+		}
+		return products;
+	}
+	public List<Product> getAllProductsByExpiredWarrenty(int year) {
+		List<Product> products = new ArrayList<Product>();
+		for(Product p:store)
+		{
+			if(p.getWarrenty()<year)
+			{
+				products.add(p);
+			}
+		}
+		return products;
+	}
+	public List<Product> getPorductsByParticularText(String name) {
+		// TODO Auto-generated method stub
+		List<Product> ans = new ArrayList<Product>();
+		for(Product p:store)
+		{
+			String name = p.getName().toLowerCase();
+			String place = p.getPlace().toLowerCase();
+			
+			if(p.getName().contains(name)||p.getPlace().contains(name)||p.getType().contains(name))
+			{
+				ans.add(p);
+			}
+		}
+		return ans;
+	}
+}

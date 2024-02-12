@@ -1,0 +1,8 @@
+package com.charitra.DemoReact.DemoReact1;
+
+public class Aliens {
+	
+	private String name;
+	private int points;
+	
+}

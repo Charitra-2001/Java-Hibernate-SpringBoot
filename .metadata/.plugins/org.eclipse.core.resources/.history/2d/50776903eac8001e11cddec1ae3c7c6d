@@ -1,0 +1,11 @@
+package com.charitra.SpringMVC;
+
+import javax.print.attribute.standard.PDLOverrideSupported;
+
+public class Main {
+	ProductService ps = new ProductService();
+	
+	Product p = new Product();
+	p
+	ps.addProduct();
+}

@@ -1,0 +1,14 @@
+package com.charitra.SpringDemo;
+
+public class Alien {
+	private Laptop lap;
+	public Laptop getLap() {
+		return lap;
+	}
+	public void setLap(Laptop lap) {
+		this.lap = lap;
+	}
+	public void code() {
+		lap.compile();
+	}
+}
