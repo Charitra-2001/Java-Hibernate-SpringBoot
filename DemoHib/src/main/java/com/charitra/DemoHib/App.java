@@ -58,31 +58,47 @@ public class App {
 	
 	static void RelationShip_Method() throws Exception
 	{
-//		Laptop lp = new Laptop();  // Uncomment the method from the Laptop class to make this work
-//		lp.setLid(101);
-//		lp.setLname("Dell");
-//		
-//		Student st = new Student();
-//		st.setRollno(1);
-//		st.setName("Charitra");
-//		st.setMarks(56);
-//		st.getLaptop().add(lp); // As it will give error if we do not specify the relationship in their classes
-//		// If we are not specifying the relation in all the class with whom we are making the relation
-//		// Then it will create the another table which is not much required
-//		
-//		lp.getStudent().add(st);
-//		
-//		Configuration cg = new Configuration().configure().addAnnotatedClass(Laptop.class).addAnnotatedClass(Student.class);
-//		SessionFactory sf = cg.buildSessionFactory();
-//		Session s = sf.openSession();
-//		
-//		s.beginTransaction();
-//		
-//		
-//		s.save(lp);
-//		s.save(st);
-//		
-//		s.getTransaction().commit();
+		Laptop lp = new Laptop();  // Uncomment the method from the Laptop class to make this work
+		lp.setLid(101);
+		lp.setLname("Lenovo");
+		
+		Laptop lp1 = new Laptop();  // Uncomment the method from the Laptop class to make this work
+		lp1.setLid(102);
+		lp1.setLname("MAC");
+		
+		
+		Student st = new Student();
+		st.setRollno(1);
+		st.setName("Charitra");
+		st.setMarks(56);
+		
+		
+		Student st1 = new Student();
+		st1.setRollno(2);
+		st1.setName("Abhishek");
+		st1.setMarks(57);
+		
+		
+		st.getLaptop().add(lp); // As it will give error if we do not specify the relationship in their classes
+		// If we are not specifying the relation in all the class with whom we are making the relation
+		// Then it will create the another table which is not much required
+		st.getLaptop().add(lp1);
+		
+		lp.getStudent().add(st);
+		lp.getStudent().add(st1);
+		Configuration cg = new Configuration().configure().addAnnotatedClass(Laptop.class).addAnnotatedClass(Student.class);
+		SessionFactory sf = cg.buildSessionFactory();
+		Session s = sf.openSession();
+		
+		s.beginTransaction();
+		
+		
+		s.save(lp);
+		s.save(st);
+		s.save(lp1);
+		s.save(st1);
+		
+		s.getTransaction().commit();
 	}
 	
 	static void Fetch_Data_from_table() throws Exception
@@ -227,31 +243,31 @@ public class App {
 
 	static void LifeCycle() throws Exception
 	{
-		Configuration cg = new Configuration().configure().addAnnotatedClass(Laptop.class);
-		SessionFactory sf = cg.buildSessionFactory();
-		Session s = sf.openSession();
-		
-		s.beginTransaction();
-		
-		Laptop l = new Laptop();
-		l.setId(51);
-		l.setBrand("Sony");
-		l.setPrice(700);
-		
-		s.save(l);
-		/*
-		 * As we are writing this after save it does have any effect on database
-		 * but as it is now in persistent state then the value in the database will also be changed
-		 */
-		l.setPrice(650);
-		
-		s.getTransaction().commit();
-		
-		/*
-		 * As we have evicted the object from the database it will not update the value in the database
-		 */
-		s.evict(l);
-		l.setPrice(9000);
+//		Configuration cg = new Configuration().configure().addAnnotatedClass(Laptop.class);
+//		SessionFactory sf = cg.buildSessionFactory();
+//		Session s = sf.openSession();
+//		
+//		s.beginTransaction();
+//		
+//		Laptop l = new Laptop();
+//		l.setId(51);
+//		l.setBrand("Sony");
+//		l.setPrice(700);
+//		
+//		s.save(l);
+//		/*
+//		 * As we are writing this after save it does have any effect on database
+//		 * but as it is now in persistent state then the value in the database will also be changed
+//		 */
+//		l.setPrice(650);
+//		
+//		s.getTransaction().commit();
+//		
+//		/*
+//		 * As we have evicted the object from the database it will not update the value in the database
+//		 */
+//		s.evict(l);
+//		l.setPrice(9000);
 	}
 	
 	static void GetVsLoad() throws Exception
@@ -262,6 +278,6 @@ public class App {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		GetVsLoad();
+		RelationShip_Method();
 	}
 }

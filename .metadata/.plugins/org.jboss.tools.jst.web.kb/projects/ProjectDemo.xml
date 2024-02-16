@@ -24,6 +24,7 @@
   <path value="/Users/Charitra/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar"/>
   <path value="/Users/Charitra/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.2/spring-boot-starter-3.2.2.jar"/>
   <path value="/Users/Charitra/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar"/>
+  <path value="/Users/Charitra/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar"/>
   <path value="/Users/Charitra/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar"/>
   <path value="/Users/Charitra/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.18/tomcat-embed-el-10.1.18.jar"/>
   <path value="/Users/Charitra/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar"/>
@@ -105,7 +106,6 @@
   <path value="/Users/Charitra/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar"/>
  </paths>
  <validation>
-  <core validator-id="jboss.cdi.core"/>
   <el/>
  </validation>
  <aliases/>

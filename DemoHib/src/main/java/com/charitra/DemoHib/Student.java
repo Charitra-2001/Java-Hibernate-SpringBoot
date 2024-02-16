@@ -36,18 +36,18 @@ public class Student {
 //		this.laptop = laptop;
 //	}
 	
-//	@ManyToMany(mappedBy="student") // It shows that one student can have multiple laptops;
+	@ManyToMany(mappedBy="student") // It shows that one student can have multiple laptops;
 	/* Here we are mappedBy to tell the table that it is mapped by another table so it do
 	not need to make any other table */
-//	private List<Laptop> laptop = new ArrayList<>();
-//	
-//	public List<Laptop> getLaptop() {
-//		return laptop;
-//	}
-//
-//	public void setLaptop(List<Laptop> laptop) {
-//		this.laptop = laptop;
-//	}
+	private List<Laptop> laptop = new ArrayList<>();
+	
+	public List<Laptop> getLaptop() {
+		return laptop;
+	}
+
+	public void setLaptop(List<Laptop> laptop) {
+		this.laptop = laptop;
+	}
 
 	public int getRollno() {
 		return rollno;

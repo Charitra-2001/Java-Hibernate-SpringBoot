@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 public class Laptop {
-	 /*@Id // This is created for Refrence Function in App
+	 @Id // This is created for Refrence Function in App
 	private int lid;
 	private String lname;
 	
@@ -21,14 +21,14 @@ public class Laptop {
 //	}
 	
 	@ManyToMany // It means that multiple students can have multiple laptops;
-//	private List<Student> student=new ArrayList<>();
-//	
-//	public List<Student> getStudent() {
-//		return student;
-//	}
-//	public void setStudent(List<Student> student) {
-//		this.student = student;
-//	}
+	private List<Student> student=new ArrayList<>();
+	
+	public List<Student> getStudent() {
+		return student;
+	}
+	public void setStudent(List<Student> student) {
+		this.student = student;
+	}
 	
 	
 	
@@ -44,8 +44,8 @@ public class Laptop {
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
-	*/
-	@Id
+	
+	/*@Id
 	private int id;
 	private int price;
 	private String brand;
@@ -82,5 +82,5 @@ public class Laptop {
 	public String toString() {
 		return "Laptop [id=" + id + ", price=" + price + ", brand=" + brand + "]";
 	}
-	
+	*/
 }
