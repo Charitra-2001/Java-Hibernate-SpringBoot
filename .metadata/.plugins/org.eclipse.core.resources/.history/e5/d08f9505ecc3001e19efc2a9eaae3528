@@ -1,5 +1,0 @@
-package com.charitra;
-
-public interface AlienRepository extends CrudRepository<> {
-
-}

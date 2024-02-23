@@ -1,8 +1,0 @@
-package com.charitra.SpringDemo;
-
-public class Alien {
-	private Laptop lap;
-	public void code() {
-		lap.compile();
-	}
-}

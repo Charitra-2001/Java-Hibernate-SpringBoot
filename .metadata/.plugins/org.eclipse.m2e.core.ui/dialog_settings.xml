@@ -26,13 +26,16 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.charitra.springmvc"/>
 			<item value="com.charitra.DemoReact.DemoReact1"/>
 			<item value="com.charitra.DemoReact.DemoReact"/>
 		</list>
 		<list key="groupId">
+			<item value="com.charitra"/>
 			<item value="com.charitra.DemoReact"/>
 		</list>
 		<list key="artifactId">
+			<item value="springmvc"/>
 			<item value="DemoReact1"/>
 			<item value="DemoReact"/>
 		</list>

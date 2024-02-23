@@ -1,8 +1,0 @@
-package com.charitra.SpringDemo;
-
-public class Alien {
-	Laptop lap;
-	public void code() {
-		System.out.println("I am coding...");
-	}
-}

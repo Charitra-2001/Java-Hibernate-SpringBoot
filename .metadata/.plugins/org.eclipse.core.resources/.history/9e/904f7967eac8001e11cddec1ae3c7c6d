@@ -1,8 +1,0 @@
-package com.charitra.SpringMVC;
-
-public class Main {
-	ProductService ps = new ProductService();
-	
-	Product p = new Product("Asus Vivobook","Laptop","Brown Table",2020);
-	ps.addProduct(p);
-}
